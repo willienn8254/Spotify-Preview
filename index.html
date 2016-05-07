@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spotify</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+	  <div class="row">
+
+	  	<h1>Spotify Preview</h1>
+	    <div class="col-md-6 col-md-offset-3">
+
+	    			<div class="form-group">
+
+	    	          <input type="text" class="form-control input-lg" id="input" placeholder="Ingresa una cancion o artista">
+	    	        
+	    	        </div>
+
+	    </div>
+	  </div>
+
+	  <div class="result">
+
+	  </div>
+		
+	
+	<script id="templatewe" type="text/x-handlebars-template">
+	{{#each datos}}
+	<div class="row x">
+			  <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+			  	<div class="result">
+
+			  		<div class="col-md-4 imagen"><img id="holi" src={{this.album.images.1.url}}></div>
+			  		<div class="col-md-8">
+
+			  			<div class="row track"><p>{{this.name}}</p></div>
+			  			<div class="row"><p id="artist">{{this.artists.0.name}}</p></div>
+			  			<div class="row"><audio controls><source src={{this.preview_url}} type="audio/ogg"></audio></div>
+			  			
+
+
+			  		</div>
+			  		
+
+
+
+
+			  	</div>
+
+					    	        
+			  </div>
+	  </div>
+	 {{/each}}
+
+	</script>
+
+
+
+
+	  </div>
+	
+
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</body>
+</html>
